@@ -5,16 +5,16 @@
 # Date  : 2019-02-24 15:04
 from dequeue import Dequeue
 
-def palchecker (aString):
-    chardequeue = Dequeue()
+def pal_checker (aString):
+    char_dequeue = Dequeue()
     for ch in aString:
-        chardequeue.addRear(ch)
+        char_dequeue.addRear(ch)
     stillEqual = True
-    while chardequeue.size()>1 and stillEqual:
-        first = chardequeue.removeFront()
-        last = chardequeue.removeRear()
+    while char_dequeue.size()>1 and stillEqual:
+        first = char_dequeue.removeFront()
+        last = char_dequeue.removeRear()
         if first != last:
             stillEqual = False
     return stillEqual
-print(palchecker('lsdjiasdjasdjaskd'))
-print(palchecker('上海自来水来自海上'))
+print(pal_checker('lsdjiasdjasdjaskd'))
+print(pal_checker('上海自来水来自海上'))
